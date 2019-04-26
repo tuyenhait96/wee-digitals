@@ -29,7 +29,10 @@ code {
   font-family: LatoBlack;
   src: url(fonts/LatoBlack.ttf)format('truetype');
 }
-
+@font-face {
+  font-family: LatoBold;
+  src: url(fonts/Lato-Bold.ttf)format('truetype');
+}
 /* - BelindaScript */
 @font-face{
   font-family: BelindaScript;
