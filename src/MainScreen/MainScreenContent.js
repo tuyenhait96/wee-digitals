@@ -10,6 +10,7 @@ const MainScreenContentStyled = styled.div`
     background-image: linear-gradient(to top, #00cfff, #005cec, #005bec);
     text-align: center;
     padding: 48px 68px 126px 76px;
+    border-left: solid 1px #979797;
     .img-vng{
         text-align: left;
     }
@@ -43,21 +44,29 @@ const MainScreenContentStyled = styled.div`
         .money-pay {
             position: relative;
             transform: translateY(-58px);
+            text-align: left;
+            padding-left: 21px;
             img{
                 position: absolute;
-                top: 5px;
-                left: 22px;
+                top: 22px;
+                left: 42px;
             }
             input[type='text'] {
-                width: 340px;
+                width: 237px;
                 padding: 13px 32px 14px 72px;
                 text-align: center;
                 border-radius: 15px;
                 border: none;
                 outline: none;
+                font-family: LatoBlack;
+                font-size: 40px;
+                font-weight: 900;
+                letter-spacing: 0.8px;
+                ${'' /* color: #00cfff; */}
+
             }
             
-            input::placeholder {
+            ${'' /* input::placeholder {
                 opacity: 0.5;
                 font-family: Roboto;
                 font-size: 18px;
@@ -68,7 +77,7 @@ const MainScreenContentStyled = styled.div`
 
             input[placeholder]{
                 color: red !important;
-            }
+            } */}
         }
         .detail-content {
             width: 432px;

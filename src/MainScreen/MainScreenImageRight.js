@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const MainScreenImage02Styled = styled.div`
-    background: yellow;
-    ${'' /* flex: 1; */}
-        height: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    ${'' /* flex: 1; */}
     flex-flow: row wrap;
-    border: solid 1px #979797;
-    background-image: linear-gradient(to top, #02b6e3, #006fc5, #005bec);
+    ${'' /* background-image: linear-gradient(to top, #02b6e3, #006fc5, #005bec); */}
     padding-top: 10px;
     .image{
         width:60px;
