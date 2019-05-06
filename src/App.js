@@ -6,7 +6,9 @@ import { mainscreenImage } from './data/dataGeneral';
 import MainScreenContainer from './MainScreen/MainScreenContainer';
 
 
-const BounceStyled = styled.div``
+const BounceStyled = styled.div`
+  height: 120vh;
+`
 function App() {
   return (
     <BounceStyled className = 'container'>
