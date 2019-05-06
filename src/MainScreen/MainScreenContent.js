@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import logo from '../image/logo.svg';
 import icon_vnd  from '../image/vnd-icon.svg';
 import icon_pay from '../image/cent.svg';
+import NumberFormat from 'react-number-format';
 
 const MainScreenContentStyled = styled.div`
     width: 44%;
@@ -87,18 +88,6 @@ const MainScreenContentStyled = styled.div`
 `
 
 class MainScreenContent extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            txtInput: ''
-        }
-    }
-    onHandleChange(e) {
-        const name = e.target.name
-        const value = e.target.value
-        console.log(value)
-        this.setState({[name]: value});
-    } 
     render() {
         return (
             <MainScreenContentStyled>
@@ -118,10 +107,7 @@ class MainScreenContent extends Component {
                         </div>
                         <div className = 'money-pay'>
                             <img src = {icon_pay} alt = 'pay'/>
-                            <input type = 'text'
-                                onChange = {this.onHandleChange.bind(this)}
-                                name = 'txtInput'
-                            />
+                            <NumberFormat thousandSeparator={'.'} decimalSeparator={','} />
                         </div>
                     </div>
                     <div className = 'detail-content'>
