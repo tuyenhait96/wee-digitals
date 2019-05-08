@@ -1,30 +1,40 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const MainScreenImage02Styled = styled.div`
+const MainScreenImageStyled = styled.div`
     min-width: 28%;
     width: 28%;
-    height: fit-content;
+    height: 100%;
     display: inline-block;
+    overflow: auto;
+    ::-webkit-scrollbar{
+        width: 0;
+    }
     .image{
-        width:60px;
-        height: 60px;
+        width:14.8%;
+        height: 7.5%;
         border-radius: 5px;
-        padding: 0 10px 10px 0;
+        padding: 0 2.47% 2.47% 0;
         display: inline-block;
         float: left;
+        p{
+            font-family: UTMAvoBold;
+            color: red;
+            font-size: 10px;
+            margin-top: -66px;
+        }
         &:nth-child(5n) {
             padding-right: 0;
         }
         &:first-child {
-            padding-left: 32px;
+            padding-left: 7.92%;
         }
         &:nth-child(5n + 1) {
-            padding-left: 32px;
+            padding-left: 7.92%;
         }
         img{
-            width:60px;
-            height: 60px;
+            width:100% !important;
+            height: 100% !important;
             border-radius: 5px;
             object-fit: cover;
         }
@@ -33,8 +43,8 @@ const MainScreenImage02Styled = styled.div`
         clear: both;
     }
     .border-yellow{
-        width:60px;
-        height: 60px;
+        width:100% !important;
+        height: 100% !important;
         border-radius: 5px;
         background: #ffd000;
         padding-right: 10px;
@@ -54,16 +64,25 @@ class MainScreenImageRight extends Component {
             return(
                 <div className = 'image' key = {i}>
                     <img src = {item.img} alt = {item.index}/>
-                    {/* {item.index} */}
+                    <p>{item.index}</p>
                 </div>
             )
         })
     }
+    synchScroll(scrollId) {
+        let left = document.getElementById('left')
+        let right = document.getElementById('right')
+        if(scrollId === 'left'){
+            right.scrollTop = left.scrollTop
+        }else{
+            left.scrollTop = right.scrollTop
+        }
+    }
     render() {
         return (
-            <MainScreenImage02Styled>
+            <MainScreenImageStyled id = 'right' onScroll = {this.synchScroll.bind(this, 'right')}>
                 {this.renderImage()}
-            </MainScreenImage02Styled>
+            </MainScreenImageStyled>
         );
     }
 }

@@ -81,10 +81,6 @@ export const mainscreenImage = [
    },
    {
       index: 17,
-      img: image06
-   },
-   {
-      index: 17,
       img: image07
    },
    {
@@ -321,6 +317,166 @@ export const mainscreenImage = [
    {
       index: 76,
       img: image13
+   },
+   {
+      index: 77,
+      img: image05
+   },
+   {
+      index: 78,
+      img: image09
+   },
+   {
+      index: 79,
+      img: border_yellow
+   },
+   {
+      index: 80,
+      img: image12
+   },
+   {
+      index: 81,
+      img: image04
+   },
+   {
+      index: 82,
+      img: image06
+   },
+   {
+      index: 83,
+      img: border_yellow
+   },
+   {
+      index: 84,
+      img: border_white
+   },
+   {
+      index: 85,
+      img: image12
+   },
+   {
+      index: 86,
+      img: image04
+   },
+   {
+      index: 87,
+      img: image06
+   },
+   {
+      index: 88,
+      img: border_yellow
+   },
+   {
+      index: 89,
+      img: border_white
+   },
+   {
+      index: 90,
+      img: image11
+   },
+   {
+      index: 91,
+      img: image12
+   },
+   {
+      index: 92,
+      img: image04
+   },
+   {
+      index: 93,
+      img: image06
+   },
+   {
+      index: 94,
+      img: image07
+   },
+   {
+      index: 95,
+      img: image08
+   },
+   {
+      index: 96,
+      img: image11
+   },
+   {
+      index: 97,
+      img: image12
+   },
+   {
+      index: 98,
+      img: image13
+   },
+   {
+      index: 99,
+      img: image05
+   },
+   {
+      index: 100,
+      img: image09
+   },
+   {
+      index: 101,
+      img: image04
+   },
+   {
+      index: 102,
+      img: image04
+   },
+   {
+      index: 103,
+      img: image05
+   },
+   {
+      index: 104,
+      img: image11
+   },
+   {
+      index: 105,
+      img: image12
+   },
+   {
+      index: 106,
+      img: image04
+   },
+   {
+      index: 107,
+      img: image06
+   },
+   {
+      index: 108,
+      img: image07
+   },
+   {
+      index: 109,
+      img: image08
+   },
+   {
+      index: 110,
+      img: image11
+   },
+   {
+      index: 111,
+      img: image12
+   },
+   {
+      index: 112,
+      img: image13
+   },
+   {
+      index: 113,
+      img: image05
+   },
+   {
+      index: 114,
+      img: image09
+   },
+   {
+      index: 115,
+      img: image04
+   },
+   {
+      index: 116,
+      img: image11
    },
    {
       index: 77,

@@ -9,6 +9,9 @@ body {
   height: 100vh;
 }
 
+/* body::-webkit-scrollbar{
+  width: 5px;
+} */
 #root {
   min-width: 1440px;
   width: 100%;

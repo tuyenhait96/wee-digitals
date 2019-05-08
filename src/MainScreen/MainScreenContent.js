@@ -14,6 +14,7 @@ const MainScreenContentStyled = styled.div`
     border-left: solid 1px #979797;
     .img-vng{
         text-align: left;
+        cursor: pointer;
     }
     .content-weesmile {
         padding-top: 47px;
@@ -69,8 +70,6 @@ const MainScreenContentStyled = styled.div`
                 font-size: 40px;
                 font-weight: 900;
                 letter-spacing: 0.8px;
-                ${'' /* color: #00cfff; */}
-
             }
         }
         .detail-content {
@@ -88,11 +87,24 @@ const MainScreenContentStyled = styled.div`
 `
 
 class MainScreenContent extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            pushImages: this.props.onPushImage,
+        }
+    }
+    
+    onPushImage() {
+        console.log('on push')
+        this.props.onPushImage()
+    }
+
+
     render() {
         return (
             <MainScreenContentStyled>
                 <img src = {logo} alt = 'logo'/> 
-                <div className = 'img-vng'>
+                <div className = 'img-vng' onClick = {this.onPushImage.bind(this)}>
                     <img src = {icon_vnd} alt = 'icon-vnd'/>
                 </div>
                 <div className = 'content-weesmile'>
@@ -107,7 +119,7 @@ class MainScreenContent extends Component {
                         </div>
                         <div className = 'money-pay'>
                             <img src = {icon_pay} alt = 'pay'/>
-                            <NumberFormat thousandSeparator={'.'} decimalSeparator={','} />
+                            <NumberFormat thousandSeparator={'.'} decimalSeparator={','}/>
                         </div>
                     </div>
                     <div className = 'detail-content'>
