@@ -9,10 +9,6 @@ import { mainscreenImage } from '../data/dataGeneral';
 //Image
 import image11 from './../image/11.png';
 
-// min-wdith: 360px
-// scroll: left right deu scroll
-// khi click vao dau thi push 1 tam hinh vao dau mang
-
 const MainScreenContainerStyled = styled.div`
     display: flex;
     background-image: linear-gradient(to top, #02b6e3, #006fc5, #005bec);
@@ -37,6 +33,24 @@ class MainScreenContainer extends Component {
         }
         this.mainImg.unshift(newImage)
         this.renderImage()
+        this.swapIndex()
+    }
+    swapIndex() {
+        console.log('Run')
+        console.log(this.mainImg.length)
+        console.log(this.mainImg[2])
+        let isFlag = true
+         for(let i = 0 ; i< this.mainImg.length; i++) {
+             console.log('a', this.mainImg.length)
+             console.log('i', i)
+             if(isFlag){
+            if(i === 3 || i === 4 || i === 10 || i === 32 || i === 33 || i === 37 || i === 43 || i === 47 || i === 48 || i === 75 || i === 80 || i === 84 || i === 85 || i === 89 || i === 90){
+                let tmp = this.mainImg[i-1]
+                this.mainImg[i-1] = this.mainImg[i]
+                this.mainImg[i] = tmp                    
+            }}
+        }
+        return this.mainImg
     }
 
     componentWillMount(){

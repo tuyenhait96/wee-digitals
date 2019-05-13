@@ -137,7 +137,7 @@ export const mainscreenImage = [
    },
    {
       index: 31,
-      img: border_yellow
+      img: image11
    },
    {
       index: 32,
@@ -145,7 +145,8 @@ export const mainscreenImage = [
    },
    {
       index: 33,
-      img: image11
+      img: border_yellow
+
    },
    {
       index: 34,
@@ -156,12 +157,12 @@ export const mainscreenImage = [
       img: image05
    },
    {
-      index: 36,
-      img: border_yellow
+      index: 36,      
+      img: image10
    },
    {
       index: 37,
-      img: image10
+      img: border_yellow
    },
    {
       index: 38,
@@ -180,11 +181,11 @@ export const mainscreenImage = [
       img: image09
    },{
       index: 42,
-      img: border_white
+      img: image09
    },
    {
       index: 43,
-      img: image09
+      img: border_white
    },
    {
       index: 44,
@@ -196,15 +197,15 @@ export const mainscreenImage = [
    },
    {
       index: 46,
-      img: border_yellow
+      img: image11
    },
    {
       index: 47,
-      img: border_white
+      img: border_yellow
    },
    {
       index: 48,
-      img: image11
+      img: border_white
    },
    {
       index: 49,
@@ -308,11 +309,11 @@ export const mainscreenImage = [
    },
    {
       index: 74,
-      img: border_yellow
+      img: image05  
    },
    {
       index: 75,
-      img: image05
+      img: border_yellow
    },
    {
       index: 76,
@@ -327,12 +328,12 @@ export const mainscreenImage = [
       img: image09
    },
    {
-      index: 79,
-      img: border_yellow
+      index: 79,      
+      img: image12
    },
    {
       index: 80,
-      img: image12
+      img: border_yellow
    },
    {
       index: 81,
@@ -344,15 +345,15 @@ export const mainscreenImage = [
    },
    {
       index: 83,
-      img: border_yellow
+      img: image12
    },
    {
       index: 84,
-      img: border_white
+      img: border_yellow
    },
    {
       index: 85,
-      img: image12
+      img: border_white
    },
    {
       index: 86,
@@ -363,16 +364,16 @@ export const mainscreenImage = [
       img: image06
    },
    {
-      index: 88,
+      index: 88,      
+      img: image11
+   },
+   {
+      index: 89,      
       img: border_yellow
    },
    {
-      index: 89,
+      index: 90,      
       img: border_white
-   },
-   {
-      index: 90,
-      img: image11
    },
    {
       index: 91,

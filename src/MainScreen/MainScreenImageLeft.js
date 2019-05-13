@@ -69,7 +69,6 @@ class MainScreenImageLeft extends Component {
         return (
             <MainScreenImageStyled id = "left" onScroll = {this.synchScroll.bind(this, 'left')}>
                {this.renderImage()}
-               <p>Scrolled <span id="demo">0</span> times.</p>
             </MainScreenImageStyled>
         );
     }

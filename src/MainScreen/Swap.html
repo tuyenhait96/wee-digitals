@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const _ = (arr, num) => {
+        // code here // muon so truoc day len
+        arr.unshift(num);
+        for(let i = 0 ; i < arr.length ; i++){
+            if(arr[i] === 2 || arr[i] === 3){
+            let tmp = arr[i-1];
+            arr[i-1] = arr[i];
+            arr[i] = tmp;
+            }
+        }
+        // muon so sau day len
+        // for(let i = 0 ; i < arr.length ; i++){
+        //     if(arr[i] === 2 || arr[i] === 3){
+        //     let tmp = arr[i];
+        //     arr[i] = arr[i+1];
+        //     arr[i+1] = tmp;
+        //     }
+        // }
+        return arr;
+        }
+
+        const _fn = _([1, 2, 3, 4, 5], 6) // [6, 2, 3, 1, 4,  
+        console.log(_fn)
+
+        setTimeout(()=>{
+            console.log("Helllo a")
+        },5000)
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

@@ -12,9 +12,11 @@ const MainScreenContentStyled = styled.div`
     text-align: center;
     padding: 48px 68px 126px 76px;
     border-left: solid 1px #979797;
+    .logo{
+        cursor: pointer;
+    }
     .img-vng{
         text-align: left;
-        cursor: pointer;
     }
     .content-weesmile {
         padding-top: 47px;
@@ -103,8 +105,8 @@ class MainScreenContent extends Component {
     render() {
         return (
             <MainScreenContentStyled>
-                <img src = {logo} alt = 'logo'/> 
-                <div className = 'img-vng' onClick = {this.onPushImage.bind(this)}>
+                <img src = {logo} className ='logo' alt = 'logo' onClick = {this.onPushImage.bind(this)}/> 
+                <div className = 'img-vng'>
                     <img src = {icon_vnd} alt = 'icon-vnd'/>
                 </div>
                 <div className = 'content-weesmile'>
