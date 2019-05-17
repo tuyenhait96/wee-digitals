@@ -8,6 +8,7 @@ import MainScreenImageRight from './MainScreenImageRight';
 import { mainscreenImage } from '../data/dataGeneral';
 //Image
 import image11 from './../image/11.png';
+import { Promise } from 'q';
 
 const MainScreenContainerStyled = styled.div`
     display: flex;
@@ -16,6 +17,10 @@ const MainScreenContainerStyled = styled.div`
     padding-top: 10px;
  `
 
+ /*
+    split setTimeout MainscreenLeft
+    split setTimeout MainscreenRight ( moi hinh 1s , moi hinh 1 s, setState 1 lan)
+ */
 class MainScreenContainer extends Component {
     constructor(props) {
         super(props)
@@ -31,31 +36,29 @@ class MainScreenContainer extends Component {
             let newImage = {
                 img: image11
             }
-            this.mainImg.unshift(newImage)
-            this.swapIndex()
-            this.renderImage()
+            // this.mainImg.unshift(newImage)
+            // this.swapIndex()
+            this.renderImage(newImage)
             console.log('time')
-        }, 2000);
+        }, 500);
     }
     swapIndex() {
         console.log(this.mainImg.length)
         for (let i = 0; i < this.mainImg.length; i++) {
             setTimeout(() => {
-                console.log('a', this.mainImg.length)
-                console.log('i', i)
+                // console.log('a', this.mainImg.length)
                 if (i === 3 || i === 4 || i === 10 || i === 32 || i === 33 || i === 37 || i === 43 || i === 47 || i === 48 || i === 75 || i === 80 || i === 84 || i === 85 || i === 89 || i === 90) {
                     let tmp = this.mainImg[i - 1]
                     this.mainImg[i - 1] = this.mainImg[i]
                     this.mainImg[i] = tmp
-                }    
-            }, 1500);
-            // console.log('a', this.mainImg.length)
-            // console.log('i', i)
-            // if (i === 3 || i === 4 || i === 10 || i === 32 || i === 33 || i === 37 || i === 43 || i === 47 || i === 48 || i === 75 || i === 80 || i === 84 || i === 85 || i === 89 || i === 90) {
-            //     let tmp = this.mainImg[i - 1]
-            //     this.mainImg[i - 1] = this.mainImg[i]
-            //     this.mainImg[i] = tmp
-            // }
+                }
+                console.log('i setI', i)
+                // arrow function chay noi bo
+            }, 1000*i);
+
+            setTimeout(() => {
+                
+            }, 1000*i);
         }
         return this.mainImg
     }
@@ -63,14 +66,14 @@ class MainScreenContainer extends Component {
     componentWillMount() {
         this.renderImage()
     }
-    renderImage() {
+    async renderImage(newImg) {
         let leftImage = []
         let rightImage = []
         let isLeft = true
-        console.log('length', this.mainImg.length)
+        // console.log('length', this.mainImg.length)
         for (let i = 0; i < this.mainImg.length; i = i + 5) {
             // luc nay length: 16 nen i = 15
-            console.log('i', i)
+            // console.log('i', i)
             // 0, 5, 10, 15
             let maxIndex = 5;
             // i = 15
@@ -79,16 +82,16 @@ class MainScreenContainer extends Component {
                 maxIndex = this.mainImg.length - i
                 // 16-15 = 1
             }
-            console.log('i after', i)
-            console.log('maxIbdex', maxIndex)
+            // console.log('i after', i)
+            // console.log('maxIbdex', maxIndex)
             // 1
             if (isLeft) {
                 for (let j = 0; j < maxIndex; j++) {
-                    console.log(i, j)
+                    // console.log(i, j)
                     leftImage.push(
                         this.mainImg[i + j]
                     )
-                    console.log('mainscreenImageLeft[i+j]', this.mainImg[i + j])
+                    // console.log('mainscreenImageLeft[i+j]', this.mainImg[i + j])
                 }
                 isLeft = false
             }
@@ -97,14 +100,61 @@ class MainScreenContainer extends Component {
                     rightImage.push(
                         this.mainImg[i + j]
                     )
-                    console.log('mainscreenImageRight[i+j]', this.mainImg[i + j])
+                    // console.log('mainscreenImageRight[i+j]', this.mainImg[i + j])
                 }
 
                 isLeft = true
             }
         }
-        this.setState({ leftImage, rightImage })
-        console.log(leftImage, rightImage)
+        // this.setState({ leftImage, rightImage })
+        // console.log(leftImage, rightImage)
+        console.log('a', leftImage.length)
+        if(newImg){
+            let oldImg=null
+            for (let i = 0; i < leftImage.length; i++) {
+                if(oldImg){
+                    let img=leftImage[i]
+                    leftImage[i]=oldImg
+                    oldImg=img
+                }
+                else{
+                    oldImg=leftImage[i]
+                    leftImage[i]=newImg
+                }
+                this.setState({leftImage})
+                await this.delay()
+                // setTimeout(() => {
+                //     // console.log('a', this.mainImg.length)
+                //     // if (i === 3 || i === 4) {
+                //     //     let tmp = leftImage[i - 1]
+                //     //     leftImage[i - 1] = leftImage[i]
+                //     //     leftImage[i] = tmp
+                //     // }
+                    console.log('i setI', i)
+                // }, 1000*i);
+                
+            } 
+            for (let i = 0; i < rightImage.length; i++) {
+                setTimeout(() => {
+                    // console.log('a', this.mainImg.length)
+                    // if (i === 3 || i === 4) {
+                    //     let tmp = rightImage[i - 1]
+                    //     rightImage[i - 1] = rightImage[i]
+                    //     rightImage[i] = tmp
+                    // }
+                    console.log('i setI', i)
+                }, 1000*i);
+            }
+        }
+        else{
+            this.setState({
+                leftImage, rightImage
+            });
+        }
+    }
+
+    delay(){
+        return Promise(resolve=>{setTimeout(resolve, 10)})
     }
 
     render() {

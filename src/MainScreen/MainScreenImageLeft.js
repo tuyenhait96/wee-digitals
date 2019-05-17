@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import image01 from './../image/1.png';
-import { mainscreenImage } from '../data/dataGeneral';
 
 const MainScreenImageStyled = styled.div`
     min-width: 28%;
