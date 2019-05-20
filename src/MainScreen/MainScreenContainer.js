@@ -27,9 +27,16 @@ const MainScreenContainerStyled = styled.div`
         border-radius: 5px;
         background-color: #ffd000;
     }
+    .main-left{
+       display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    min-width: 410px;
+    width: 33%;
+    padding-top: 5px;
+    overflow-y: hidden; 
+    }
  `;
-
-
 
 class MainScreenContainer extends Component {
     // _squareData;
@@ -147,9 +154,11 @@ class MainScreenContainer extends Component {
     render() {
         return (
             <MainScreenContainerStyled>
-                <MainScreenImageLeft
-                     dataSquare = {squareData}
-                     data={this.state.leftImage} onPushImage={this.onPushImage.bind(this)} />
+                <div className = 'main-left'>
+                    <MainScreenImageLeft
+                        dataSquare = {squareData}
+                        data={this.state.leftImage} onPushImage={this.onPushImage.bind(this)} />
+                </div>
                 <MainScreenContent
                     money='1000 VND'
                     content_money='at the time, we make the diffenrence to those who need it.'

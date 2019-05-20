@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const MainScreenImageStyled = styled.div`
-    min-width: 28%;
+    ${'' /* min-width: 28%;
     width: 28%;
     height: 100%;
-    display: inline-block;
+    display: inline-block; */}
+    width: 350px;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0px 30px;
     overflow: auto;
     ::-webkit-scrollbar{
         width: 0;
@@ -45,12 +50,12 @@ const MainScreenImageStyled = styled.div`
         &:nth-child(5n) {
             margin-right: 0;
         }
-        &:first-child {
+        ${'' /* &:first-child {
             margin-left: 7.92%;
         }
         &:nth-child(5n + 1) {
             margin-left: 7.92%;
-        }
+        } */}
         img{
             width:100% !important;
             height: 100% !important;
@@ -72,7 +77,6 @@ const MainScreenImageStyled = styled.div`
 `
 class MainScreenImageLeft extends Component {
     renderImage() {
-        
         return this.props.data.map((item, i) => {
             switch (item) {
                 case 'white':
@@ -91,21 +95,6 @@ class MainScreenImageLeft extends Component {
                         </div>
                     )
             }
-            // if (this.props.dataSquare.find(item => item.index === i)) {
-            //     const currentSquare = this.props.dataSquare.find(item => item.index === i);
-            //     console.log('block ',i)
-            //     return (
-            //         <div className={'image ' + currentSquare.color} key ={i} />
-            //     )
-            // } else {
-            //     console.log('image ',i)
-            //     return(
-            //         <div className = 'image' key ={i}>
-            //             <img src = {item.img} alt = {item.index} />
-            //             <p>{item.index}</p>
-            //         </div>
-            //     )
-            // }
         })
     }
 
@@ -122,9 +111,9 @@ class MainScreenImageLeft extends Component {
     render() {
         return (
             <MainScreenImageStyled id = "left" onScroll = {this.synchScroll.bind(this, 'left')}>
-               {/* <div className = 'a'> */}
-                {this.renderImage()}
-               {/* </div> */}
+               <div className = 'height-left'>
+                    {this.renderImage()}
+               </div>
             </MainScreenImageStyled>
         );
     }
