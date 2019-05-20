@@ -7,15 +7,27 @@ import icon_pay from '../image/cent.svg';
 import NumberFormat from 'react-number-format';
 
 const MainScreenContentStyled = styled.div`
-    width: 44%;
+    ${'' /* width: 44%;
     background-image: linear-gradient(to top, #00cfff, #005cec, #005bec);
     text-align: center;
     padding: 48px 68px 126px 76px;
-    border-left: solid 1px #979797;
+    border-left: solid 1px #979797; */}
+    display: flex;
+    flex-direction: column;
+    min-width: 630px;
+    background-image: linear-gradient(to top, #00cfff, #005cec, #005bec);
+    color: white;
+    position: relative;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 1 1 0%;
     .logo{
         cursor: pointer;
     }
     .img-vng{
+        width: 500px;
         text-align: left;
     }
     .content-weesmile {
@@ -101,7 +113,9 @@ class MainScreenContent extends Component {
         this.props.onPushImage()
     }
 
-
+    numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
     render() {
         return (
             <MainScreenContentStyled>

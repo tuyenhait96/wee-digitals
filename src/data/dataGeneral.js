@@ -14,6 +14,88 @@ import image13 from '../image/13.png';
 import border_yellow from '../image/border-yellow.svg';
 import border_white from '../image/border-white.png';
 
+export const squareData = [
+   {
+      index: 2,
+      color: 'yellow',
+   },
+   {
+      index: 3,
+      color: 'white',
+   },
+   {
+      index: 9,
+      color: 'yellow',
+   },
+   {
+      index: 31,
+      color: 'yellow',
+   },
+   {
+      index: 32,
+      color: 'yellow',
+   },
+   {
+      index: 36,
+      color: 'yellow',
+   },
+   {
+      index: 42,
+      color: 'white',
+   },
+   {
+      index: 46,
+      color: 'yellow',
+   },
+   {
+      index: 47,
+      color: 'white',
+   },
+   {
+      index: 74,
+      color: 'yellow',
+   },
+   {
+      index: 79,
+      color: 'yellow',
+   },
+   {
+      index: 83,
+      color: 'yellow',
+   },
+   {
+      index: 84,
+      color: 'white',
+   },
+   {
+      index: 88,
+      color: 'yellow',
+   },
+   {
+      index: 89,
+      color: 'white',
+   },
+   {
+      index: 109,
+      color: 'yellow',
+   },
+   {
+      index: 111,
+      color: 'white',
+   },
+   {
+      index: 112,
+      color: 'yellow',
+   },
+   {
+      index: 116,
+      color: 'white',
+   },
+   {
+      index: 117,
+      color: 'yellow',
+   },
+]
 export const mainscreenImage = [
    {
       index: 1,
@@ -25,11 +107,13 @@ export const mainscreenImage = [
    },
    {
       index: 3,
-      img: border_yellow
+      // img: border_yellow
+      img: image06
    },
    {
       index: 4,
-      img: border_white
+      // img: border_white
+      img: image06
    },
    {
       index: 5,
@@ -53,7 +137,8 @@ export const mainscreenImage = [
    },
    {
       index: 10,
-      img: border_yellow
+      // img: border_yellow
+      img: image06
    },
    {
       index: 11,
@@ -141,11 +226,13 @@ export const mainscreenImage = [
    },
    {
       index: 32,
-      img: border_yellow
+      // img: border_yellow
+      img: image06
    },
    {
       index: 33,
-      img: border_yellow
+      // img: border_yellow
+      img: image06
 
    },
    {
@@ -157,12 +244,13 @@ export const mainscreenImage = [
       img: image05
    },
    {
-      index: 36,      
+      index: 36,
       img: image10
    },
    {
       index: 37,
-      img: border_yellow
+      // img: border_yellow
+      img: image06
    },
    {
       index: 38,
@@ -179,13 +267,14 @@ export const mainscreenImage = [
    {
       index: 41,
       img: image09
-   },{
+   }, {
       index: 42,
       img: image09
    },
    {
       index: 43,
-      img: border_white
+      // img: border_white
+      img: image06
    },
    {
       index: 44,
@@ -201,11 +290,13 @@ export const mainscreenImage = [
    },
    {
       index: 47,
-      img: border_yellow
+      // img: border_yellow
+      img: image06
    },
    {
       index: 48,
-      img: border_white
+      img: image06
+      // img: border_white
    },
    {
       index: 49,
@@ -309,11 +400,12 @@ export const mainscreenImage = [
    },
    {
       index: 74,
-      img: image05  
+      img: image05
    },
    {
       index: 75,
-      img: border_yellow
+      // img: border_yellow
+      img: image01
    },
    {
       index: 76,
@@ -328,171 +420,12 @@ export const mainscreenImage = [
       img: image09
    },
    {
-      index: 79,      
-      img: image12
-   },
-   {
-      index: 80,
-      img: border_yellow
-   },
-   {
-      index: 81,
-      img: image04
-   },
-   {
-      index: 82,
-      img: image06
-   },
-   {
-      index: 83,
-      img: image12
-   },
-   {
-      index: 84,
-      img: border_yellow
-   },
-   {
-      index: 85,
-      img: border_white
-   },
-   {
-      index: 86,
-      img: image04
-   },
-   {
-      index: 87,
-      img: image06
-   },
-   {
-      index: 88,      
-      img: image11
-   },
-   {
-      index: 89,      
-      img: border_yellow
-   },
-   {
-      index: 90,      
-      img: border_white
-   },
-   {
-      index: 91,
-      img: image12
-   },
-   {
-      index: 92,
-      img: image04
-   },
-   {
-      index: 93,
-      img: image06
-   },
-   {
-      index: 94,
-      img: image07
-   },
-   {
-      index: 95,
-      img: image08
-   },
-   {
-      index: 96,
-      img: image11
-   },
-   {
-      index: 97,
-      img: image12
-   },
-   {
-      index: 98,
-      img: image13
-   },
-   {
-      index: 99,
-      img: image05
-   },
-   {
-      index: 100,
-      img: image09
-   },
-   {
-      index: 101,
-      img: image04
-   },
-   {
-      index: 102,
-      img: image04
-   },
-   {
-      index: 103,
-      img: image05
-   },
-   {
-      index: 104,
-      img: image11
-   },
-   {
-      index: 105,
-      img: image12
-   },
-   {
-      index: 106,
-      img: image04
-   },
-   {
-      index: 107,
-      img: image06
-   },
-   {
-      index: 108,
-      img: image07
-   },
-   {
-      index: 109,
-      img: image08
-   },
-   {
-      index: 110,
-      img: image11
-   },
-   {
-      index: 111,
-      img: image12
-   },
-   {
-      index: 112,
-      img: image13
-   },
-   {
-      index: 113,
-      img: image05
-   },
-   {
-      index: 114,
-      img: image09
-   },
-   {
-      index: 115,
-      img: image04
-   },
-   {
-      index: 116,
-      img: image11
-   },
-   {
-      index: 77,
-      img: image05
-   },
-   {
-      index: 78,
-      img: image09
-   },
-   {
       index: 79,
-      img: border_yellow
+      img: image12
    },
    {
       index: 80,
+      // img: border_yellow
       img: image12
    },
    {
@@ -505,15 +438,17 @@ export const mainscreenImage = [
    },
    {
       index: 83,
-      img: border_yellow
+      img: image12
    },
    {
       index: 84,
-      img: border_white
+      // img: border_yellow
+      img: image12
    },
    {
       index: 85,
-      img: image12
+      // img: border_white
+      img: image11
    },
    {
       index: 86,
@@ -525,15 +460,17 @@ export const mainscreenImage = [
    },
    {
       index: 88,
-      img: border_yellow
+      img: image11
    },
    {
       index: 89,
-      img: border_white
+      // img: border_yellow
+      img: image06
    },
    {
       index: 90,
-      img: image11
+      // img: border_white
+      img: image06
    },
    {
       index: 91,
@@ -640,3 +577,22 @@ export const mainscreenImage = [
       img: image11
    },
 ]
+// ---------------------- MainScreenContainer ----------------------
+// swapIndex() {
+//    console.log(this.mainImg.length)
+//    for (let i = 0; i < this.mainImg.length; i++) {
+//       setTimeout(() => {
+//          if (i === 3 || i === 4 || i === 10 || i === 32 || i === 33 || i === 37 || i === 43 || i === 47 || i === 48 || i === 75 || i === 80 || i === 84 || i === 85 || i === 89 || i === 90) {
+//             let tmp = this.mainImg[i - 1]
+//             this.mainImg[i - 1] = this.mainImg[i]
+//             this.mainImg[i] = tmp
+//          }
+//          console.log('i setI', i)
+//          // arrow function chay noi bo
+//       }, 1000 * i);
+
+//       setTimeout(() => {
+//       }, 1000 * i);
+//    }
+//    return this.mainImg
+// }
